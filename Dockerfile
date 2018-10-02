@@ -5,7 +5,7 @@ MAINTAINER Bernard Duggan <bernard@hippware.com>
 RUN apk --no-cache --update upgrade
 RUN apk add postgresql-client py2-pip
 RUN pip install --upgrade pip
-RUN pip install awscli --upgrade --user
+RUN pip install awscli
 
 COPY dump_db.sh /
 
