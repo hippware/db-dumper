@@ -3,7 +3,7 @@
 FILE=${DB_NAME}.dump.gz
 DB_USER="${DB_USER:-postgres}"
 
-echo -n "${DB_PASSWORD}" > ~/.pgpass
+echo -n "${DB_HOST}:*:${DB_NAME}:${DB_USER}:${DB_PASSWORD}" > ~/.pgpass
 chmod 0600 ~/.pgpass
 
 set -o pipefail
